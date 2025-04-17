@@ -1,0 +1,13 @@
+# --- format defaults ---
+csl: "./_assets/ieee.csl"
+format:
+  html:
+    theme: "./_assets/custom.scss"
+    linestretch: 1.7
+    code-fold: true
+    html-math-method: mathjax
+    reference-location: margin
+    # citation-location: margin
+    link-external-icon: true
+    link-external-newwindow: true
+    toc: true
