@@ -1,0 +1,161 @@
+\documentclass{resume}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{parcolumns}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%***"%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
+%***使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
+%***修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
+
+%在大括号内填写其他信息，最多填写4个，但是如果选择不填信息，
+%那么大括号必须空着不写，而不能删除大括号。
+%\otherInfo后面的四个大括号里的所有信息都会在一行输出
+%如果想要写两行，那就用两次这个指令（\otherInfo{}{}{}{}）即可
+
+
+%***********个人信息**************
+\MyName{钟星宇}
+\sepspace
+\SimpleEntry{\textbf{学校}\quad 北京理工大学}
+\SimpleEntry{\textbf{专业}\quad 数学与应用数学（强基班）}
+\SimpleEntry{\textbf{邮箱}\quad sun123zxy@qq.com}
+\SimpleEntry{\textbf{电话}\quad +86 17723294568}
+\SimpleEntry{\textbf{主页}\quad \href{https://scholar.sun123zxy.top/}{https://scholar.sun123zxy.top}}
+
+%************照片**************
+%照片需要放到images文件夹下，名字必须是you.jpg，注意.jpg后缀（可以去resume.cls第101行处修改），如果不需要照片可以不添加此行命令
+%0.15的意思是，照片的宽度是页面宽度的0.15倍，调整大小，避免遮挡文字
+\yourphoto{0.1}
+
+%***********教育背景**************
+\section{教育背景}
+%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
+%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
+\datedsubsection{\textbf{北京理工大学} \quad 数学与应用数学（强基班） \quad \textit{本科}}{2022.09 -- }
+\begin{itemize}
+  \item \textbf{国家奖学金}一项\quad\textbf{三星奖学金}一项\quad\textbf{校一等奖学金}五项\quad\textbf{校级优秀学生标兵}一项\quad\textbf{校级优秀学生}一项
+  \item \textbf{平均学分绩} 93.6 \quad\textbf{GPA} 3.9 / 4 \quad\textbf{成绩排名} 1 / 27 \quad\textbf{综测排名} 1 / 27 \quad \textbf{优良率} 100\% \quad（截至第五学期）
+  \item \textbf{专业课程}\quad 数学分析、高等代数、解析几何、概率论、复变函数、实变函数、近世代数、泛函分析、常微分方程、偏微分方程、数理统计、数值计算方法、离散数学、初等数论、并行计算、李代数量子群范畴化、C 语言程序设计基础等
+\end{itemize}
+
+\section{学术经历}
+
+\datedsubsection{\textbf{学术报告} \quad 北理工数学拔尖、强基学子赴中科大交流活动 \quad \textit{报告人}}{2024.04.20}
+\textbf{指导老师}\quad 曹鹏 \quad 副教授 \quad 北京理工大学 \quad 数学与统计学院
+\begin{itemize}
+    \item 赴中国科学技术大学交流学习并作学术报告《代数同构视角下的离散 Fourier 变换》．
+\end{itemize}
+
+\datedsubsection{\textbf{大学生创新创业项目} \quad Fourier 矩阵唯一性 \quad \textit{第一负责人}}{2022.12 -- 2023.12}
+\textbf{指导老师}\quad 张峰 \quad 副教授 \quad 北京理工大学 \quad 信息与电子学院
+\begin{itemize}
+    \item 作为第一负责人完成市、校级大创《将循环卷积转化为乘积的矩阵是否只有傅里叶矩阵？》，探讨具有电子信息应用背景的数学理论问题．
+\end{itemize}
+
+\datedsubsection{\textbf{国际项目} \quad 2025 FRP Winter Programme in Mordern Advanced Deep Learning}{2025.02}
+\textbf{Advisor}\quad Prof. Jose Hernandez-Lobato \quad
+University of Cambridge
+\begin{itemize}
+    \item A two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program. Full attendance and received the special award (3 out of 15).
+\end{itemize}
+
+\datedsubsection{\textbf{讨论班} \quad 矩阵联合上三角化 \quad \textit{参与}}{2023.11 -- 2024.06}
+\textbf{指导老师}\quad 曹鹏 \quad 副教授 \quad 北京理工大学 \quad 数学与统计学院
+\begin{itemize}
+    \item 参与讨论班．参考教材 H. Radjavi and P. Rosenthal, Simultaneous Triangularization，讨论了其前两章内容．
+\end{itemize}
+
+\section{竞赛获奖}
+\subsection{\textbf{数学竞赛}}
+
+\begin{itemize}
+\item\dated{2024 年阿里巴巴全球数学竞赛 决赛入围}{2024.04.15}
+\item\dated{2022 年北京理工大学“明理杯”新生数学竞赛 一等奖}{2022.10}
+\end{itemize}
+
+\begin{parcolumns}{2}
+\colchunk{
+\textbf{全国大学生数学竞赛}
+\begin{itemize}
+\item \dated{北京赛区预赛数学专业组 A 类三等奖}{2023.11.11}
+\item \dated{北京赛区预赛数学专业组 A 类三等奖}{2024.11.09}
+\end{itemize}
+}
+\colchunk{
+\textbf{北京市大学生数学竞赛}
+\begin{itemize}
+\item \dated{数学专业组 A 类二等奖}{2023.11.11}
+\item \dated{数学专业组 A 类三等奖}{2024.11.09}
+\end{itemize}
+}
+\end{parcolumns}
+
+\subsection{\textbf{算法竞赛}}
+
+\begin{parcolumns}{2}
+\colchunk{
+\textbf{ICPC 国际大学生程序设计竞赛}
+\begin{itemize}
+\item \dated{2023 年亚洲区域赛（西安）铜奖}{2023.10.22}
+\item \dated{2023 年亚洲区域赛（合肥）银奖}{2023.11.25}
+\item \dated{2024 年亚洲区域赛（南京）铜奖}{2024.11.03}
+\end{itemize}
+}
+\colchunk{
+\textbf{CCPC 中国大学生程序设计竞赛}
+\begin{itemize}
+\item \dated{2023 年全国邀请赛（湖南）银奖}{2023.05.28}
+\item \dated{2023 年国赛（哈尔滨站）银奖}{2023.11.05}
+\item \dated{2024 年全国邀请赛（广东）金奖}{2024.05.26}
+\item \dated{2024 年国赛（郑州站）银奖}{2024.11.17}
+\end{itemize}
+}
+\end{parcolumns}
+
+\begin{itemize}
+    \item \dated{蓝桥杯、百度之星、程序设计校赛等其它国、省、校级奖项若干}{2022--2024}
+\end{itemize}
+
+\subsection{\textbf{其它竞赛}}
+
+\begin{itemize}
+\item \dated{2023 年全国大学生统计建模大赛北京赛区选拔赛本科生组二等奖}{2023.08}
+\end{itemize}
+
+\section{社会工作}
+
+\datedsubsection{\textbf{课程讲授} \quad 2023 北理工 / 延安大学 ACM 暑期集训 \quad \textit{课程主讲人}}{2023.07 -- 2023.08}
+\begin{itemize}
+    \item 参与 2023 年北京理工大学计算机学院暑期实践重点团“‘科技强国’—暑期ACM集训”实践工作，作为算法课程主讲团队成员，为北京理工大学和延安大学学子讲授快速 Fourier 变换、数论变换相关算法与数学原理．
+\end{itemize}
+
+
+\datedsubsection{\textbf{试题命制} \quad 多场国、校级算法竞赛 \quad \textit{命题团队成员}}{2023 -- 2024}
+\begin{itemize}
+    \item 参与 2023 年北京理工大学程序设计校赛、2024 年 ICPC 国际大学生程序设计竞赛亚洲区域赛（昆明）的试题命制工作．
+\end{itemize}
+
+\datedsubsection{\textbf{研讨主持} \quad 多场数学研讨活动 / 讨论班 \quad \textit{联合主持人}}{2024 -- 2025}
+\begin{itemize}
+    \item 联合主持 2024 年春北京理工大学 2022 级数学强基班实变函数、复变函数课后研讨活动．联合主持 2024 年秋抽象代数和近世代数讨论班．
+\end{itemize}
+
+\section{其它技能}
+\paragraph{}{\textbf{计算机}\quad 熟练 Python / C++ / Web 等多项编程语言，熟悉 Linux 操作系统，熟练 Git 等团队协作开发工具．有较复杂静态网站编写和搭建经验．有小体量命令行工具开发经验．}
+\paragraph{}{\textbf{排版工具}\quad 熟练使用 LaTeX 排版工具．熟练使用 Pandoc / Quarto 等高阶出版系统．编写过适用于 Quarto 的 Lua filter 扩展．}
+\paragraph{}{\textbf{算法}\quad 前 OI / XCPC 算法竞赛选手，熟练掌握常见算法和数据结构． \quad \textbf{Codeforces max rating} 1951}
+\paragraph{}{\textbf{数学形式化}\quad 了解和正在学习基于 Lean 语言的数学形式化工作．}
+\paragraph{}{\textbf{语言}\quad \textbf{CET-4} 650 \quad \textbf{CET-6} 581 \quad \textbf{CET-SET4} A}
+
+\sepspace
+\end{document}

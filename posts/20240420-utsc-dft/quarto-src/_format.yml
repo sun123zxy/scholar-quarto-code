@@ -1,0 +1,38 @@
+# --- format defaults ---
+csl: "./_assets/ieee.csl"
+format:
+  html:
+    theme: "./_assets/custom.scss"
+    linestretch: 1.7
+    code-fold: true
+    html-math-method: mathjax
+    reference-location: margin
+    # citation-location: margin
+    link-external-icon: true
+    link-external-newwindow: true
+    toc: true
+  pdf:
+    # keep-tex: true
+    pdf-engine: xelatex
+    cite-method: biblatex # override the default csl cite method
+    execute:
+      echo: false
+    fig-pos: false
+    template: "./_assets/suntemp-art.tex"
+    # toc: true
+  docx:
+    reference-doc: "./_assets/suntemp-art.docx"
+  gfm:
+    wrap: preserve
+  beamer:
+    # slide-level: # left default to handle automatically, see Pandoc manual
+    pdf-engine: xelatex
+    theme: madrid
+    cite-method: biblatex # override the default csl cite method
+    execute:
+      echo: false
+    fig-pos: false
+    template: "./_assets/suntemp-pre.tex"
+    # toc: true
+  # revealjs: default
+  # pptx: default

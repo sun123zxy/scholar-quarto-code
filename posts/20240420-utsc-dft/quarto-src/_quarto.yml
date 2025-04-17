@@ -1,0 +1,12 @@
+project:
+  title: "SunQuarTeX"
+  output-dir: _output
+
+metadata-files: 
+  - "./_format.yml"
+  - "./_article.yml"
+
+filters:
+  - at: pre-ast
+    path: "./_assets/callthm.lua"
+  - "./_assets/tikz.lua"
