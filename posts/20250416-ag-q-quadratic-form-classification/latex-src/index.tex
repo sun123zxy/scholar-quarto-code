@@ -1,0 +1,889 @@
+% --- lang test ---
+
+\newif\ifzh
+\RequirePackage{xstring}
+\IfBeginWith{en}{zh}{
+    \zhtrue
+    \documentclass[fontset=fandol,envcountsect]{ctexbeamer}
+    \def\transmodified{最后更新于}
+    \def\transtoc{目录}
+    \def\transreferences{参考文献}
+}{
+    \zhfalse
+    \documentclass[fontset=fandol,envcountsect]{beamer}
+    \def\transmodified{Last modified on}
+    \def\transtoc{Table of Contents}
+    \def\transreferences{References}
+}
+
+% --- pandoc ---
+
+\usepackage{subcaption}
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+% --- adjust code font size ---
+
+
+% --- bibliography ---
+
+\RequirePackage[backend=biber,style=ieee,autocite=plain]{biblatex}
+% \RequirePackage[backend=biber,style=gb7714-2015,autocite=plain]{biblatex}
+\addbibresource{index.bib}
+
+\makeatletter % force emph things in biblatex to be italic
+\renewrobustcmd*{\mkbibemph}{\mkbibitalic}
+\protected\long\def\blx@imc@mkbibemph#1{\blx@imc@mkbibitalic{#1}}
+\makeatother
+
+% -- tikz --
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+
+% --- theorems ---
+
+\makeatletter
+\def\cleartheorem#1{%
+    \expandafter\let\csname#1\endcsname\relax
+    \expandafter\let\csname c@#1\endcsname\relax
+}
+\makeatother
+
+\cleartheorem{theorem}
+\cleartheorem{lemma}
+\cleartheorem{corollary}
+\cleartheorem{definition}
+\cleartheorem{example}
+\cleartheorem{solution}
+
+\ifzh % zhthm
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem{proposition}{命题}
+\newtheorem{conjecture}{猜想}
+
+\theoremstyle{example}
+\newtheorem{example}{例}
+\newtheorem{exercise}{习题}
+
+\theoremstyle{remark}
+\newtheorem*{myproof}{证明}
+\newtheorem*{solution}{解}
+\newtheorem*{remark}{注记}
+
+\renewenvironment{proof}{\begin{myproof}}{\qed \end{myproof}}
+
+\else % enthm
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+
+\theoremstyle{example}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+
+\fi % endthm
+
+% \setbeamertemplate{theorems}[numbered]
+% \setbeamertemplate{caption}[numbered]
+
+% \addtobeamertemplate{proof begin}{\setbeamercolor{block title}{bg=black}}{}
+\AtBeginEnvironment{proof}{\setbeamercolor{block title}{bg=black}}
+\AtBeginEnvironment{solution}{\setbeamercolor{block title}{bg=black}}
+\AtBeginEnvironment{remark}{\setbeamercolor{block title}{bg=black}}
+
+% --- styles ---
+
+\usetheme{Madrid}
+\usefonttheme[onlymath]{serif}
+
+\colorlet{beamer@blendedblue}{green!35!black}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=lime!80!black,
+    linkcolor=, % default color for other links
+    citecolor=lime!80!black,
+    anchorcolor=,
+    filecolor=
+}
+
+\newcommand{\myemph}[1]{{\usebeamercolor[fg]{structure} #1}}
+\renewcommand{\emph}{\myemph}
+\let\textbf\alert
+
+\ifzh
+    \setlength{\parindent}{2em}
+    \addtobeamertemplate{block begin}{}{\setlength\parindent{2em}}
+    \addtobeamertemplate{block example begin}{}{\setlength\parindent{2em}}
+    \addtobeamertemplate{alertblock alerted begin}{}{\setlength\parindent{2em}}
+
+    \setlength{\parskip}{3pt} % slighty more spacing
+\fi
+
+% --- structures ---
+
+\AtBeginSection[]
+{
+  \begin{frame}{\transtoc}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \begin{frame}{\transtoc}
+    \tableofcontents[currentsubsection]
+  \end{frame}
+}
+
+% --- main ---
+
+\title{Classification of Quardratic Forms over \(\mathbb Q\)}
+\subtitle{\textit{Algebraic Geometry}\thanks{A 2025 spring course lectured by Prof. Yangyu Fan.}
+Final Presentation}
+\author{Xingyu
+Zhong\thanks{The speaker. Other group members are: Shubin Xue, Jiale Qiu, Binhong Sheng, Wenxuan Wu, Yuqing Wang}}
+\institute[BIT]{Beijing Institute of Technology}
+\date{2025-04-16}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{\transtoc}
+  \tableofcontents
+\end{frame}
+
+\section{First Attempts and General
+Approachs}\label{first-attempts-and-general-approachs}
+
+\begin{frame}{Foreword}
+\phantomsection\label{foreword}
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\Image}{\operatorname{Im}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\rad}{\operatorname{rad}}
+
+\begin{itemize}
+\item
+  References relied on heavily:
+
+  \begin{itemize}
+  \item
+    J.P. Serre ``A Course in Arithmetic'' \autocite{serre_course_1973}
+  \item
+    Shiva Chidambaram, MIT18.782 Introduction to Arithmetic Geometry
+    (Spring 2023)
+    \href{https://math.mit.edu/classes/18.782/2023sp/LectureNotes9.pdf}{Lecture
+    Notes}
+  \item
+    Arushi Gupta, Participant Papers of The University of Chicago
+    Mathematics REU 2018,
+    \href{https://math.uchicago.edu/~may/REU2018/REUPapers/Gupta.pdf}{The
+    p-adic Integers, Analytically and Algebraically}
+  \end{itemize}
+\item
+  May serve as a guidance of the first part of
+  \autocite{serre_course_1973}
+\item
+  Assume familarity of quadratic residues and basic knowledge of
+  \(p\)-adic numbers
+\item
+  Skip most of the proofs
+\item
+  Apology in advance for potential mistakes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Notations}
+\phantomsection\label{notations}
+\begin{itemize}
+\item
+  We denote by \(K\) an arbitrary field. \textbf{All fields are assumed
+  to be of characteristic \(\neq 2\)}.
+\item
+  \(\nu_p : \mathbb Q_p \to \mathbb Z\) being the \(p\)-adic valuation.
+\item
+  \(\left(\dfrac a p \right)\) being the Legendre symbol. \(a\) is
+  understanded as \(p^{-\nu_p(a)} a \bmod p\) if \(a \in \mathbb Q_p\).
+  Define this similarly in \(\mathbb F_q\).
+\item
+  Let \(f \oplus g\) denote the direct sum of two quadratic forms \(f\)
+  and \(g\).
+\end{itemize}
+\end{frame}
+
+\subsection{\texorpdfstring{Example: Quadratic Forms over \(\mathbb R\)
+and
+\(\mathbb F_q\)}{Example: Quadratic Forms over \textbackslash mathbb R and \textbackslash mathbb F\_q}}\label{example-quadratic-forms-over-mathbb-r-and-mathbb-f_q}
+
+\begin{frame}{Review: Quadratic Forms over \(\mathbb R\)}
+\phantomsection\label{review-quadratic-forms-over-mathbb-r}
+\begin{itemize}
+\item
+  A quadratic form \(f: V \to K\) may be identified by a symmetric
+  matrix \(A \in M_n(K)\) by \(f(v) = v^\mathrm{T}A v\).
+
+  Their equivalence is defined by \emph{congruence}:
+  \(A \sim B \iff A = Q^\mathrm{T}B Q\).
+\item
+  Real symmetric matrices may be diagonalized orthogonally.
+\item
+  Scale each eigenvalue by multiplying a square. Only their sign
+  matters.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the \emph{rank} \(n\), an invariant
+  \item
+    the \emph{signature}
+    \((r,s) := (\# \text{positive eigenvalues}, \# \text{negative eigenvalues})\).
+  \end{itemize}
+\item
+  Same rank and signature implies the equivalence.
+\item
+  Sylvester's law of inertia: signature is also an invariant.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Some Refinement}
+\phantomsection\label{some-refinement}
+On an abitrary field \(K\):
+
+\begin{itemize}
+\item
+  All symmetric matrix is equivalent to a diagonal one.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Pick a non-isotropic vector \(v\) (exists when the form is nonzero),
+    its orthogonal complement is a hyperplane and does not include
+    \(v\). Change basis and do the induction.
+  \end{itemize}
+\item
+  The rank is always a invariant. \textbf{We may (and we shall always)
+  reduce to classify the non-degenerate quadratic forms of rank \(n\).}
+\item
+  The squares \((K^\times)^2\) give us the ability to scale. Knowledge
+  of distribution of diagonal elements in \(K^\times / (K^\times)^2\)
+  suffices to show the equivalence\footnote<.->[frame]{Though working in
+    the refined structure \(\{0\} \cup K^\times / (K^\times)^2\) is
+    probably a better idea if one wish to deal with the degenerate case
+    in a uniform manner.}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\mathbb C^\times / (\mathbb C^\times)^2 \cong \{1\}\), suffices to
+    classify by the rank.
+  \item
+    \(\mathbb R^\times / (\mathbb R^\times)^2 \cong \{1,-1\}\),
+    signature is also needed.
+  \item
+    \(\mathbb F_q^\times / (\mathbb F_q^\times)^2 \cong \{1,a\}\), where
+    \(a \in \mathbb F_q\) is a quadratic nonresidue.
+  \item
+    For \(\mathbb Q_p\) and \(\mathbb Q\)?
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Another Example\footnote<.->[frame]{We would like to thank
+  Prof.~Yu Zhao for his advice on this part.}: Quadratic Forms over
+\(\mathbb F_q\)}
+\phantomsection\label{another-example-quadratic-forms-over-mathbb-f_q}
+We classify the non-degenerate quadratic forms of rank \(n\).
+
+\begin{itemize}
+\item
+  Refined signature: counting nonzero quadratic residues and
+  nonresidues. It may serve as a sufficient criterion of the
+  equivalence.
+\item
+  But it's not an invariant. \(a X^2 + a Y^2 \sim X^2 + Y^2\) over
+  \(\mathbb F_q\).
+
+  \begin{itemize}
+  \item
+    Do a change of basis \(X=sU+tV\) and \(Y=tU-sV\). If we require
+    \(a U^2 + a V^2 = X^2 + Y^2\), then \(s^2+t^2=a\).
+  \item
+    It always has a nonzero solution in \(\mathbb F_q\): \(s^2\) and
+    \(a - t^2\) have both \((q+1)/2\) possible values, thus must reach a
+    common value.
+  \end{itemize}
+\item
+  The \emph{discriminant}
+  \(d := \left( \dfrac{\det(A)}{q} \right) \in \mathbb F_q^\times / (\mathbb F_q^\times)^2\)
+  is an invariant and reveals the parity of the signature. It classifies
+  the non-degenerate quadratic forms over \(\mathbb F_q\).
+\end{itemize}
+
+Insight: Existence of nonzero solutions of the equation
+\(a X^2 + b Y^2 = Z^2\) in \(K\) seems to be of great importantance.
+\end{frame}
+
+\subsection{Quadratic Spaces}\label{quadratic-spaces}
+
+\begin{frame}{Quadratic Spaces}
+\phantomsection\label{quadratic-spaces-1}
+The structure of a quadratic space, i.e.~vector space equipped with a
+symmetric bilinear form, is much more subtle than its positive-definite
+counterpart over \(\mathbb R\) or \(\mathbb C\). For example, for a
+non-degenerate quadratic space \(V\) and a subspace \(U\) of \(V\)
+(\autocite{serre_course_1973} p.~28, chap.~4, sec.~1.2):
+
+\begin{itemize}
+\item
+  \(U \cap U^\perp = \operatorname{rad}(U)\),
+  \(\dim U + \dim U^\perp = \dim V\), \((U^\perp)^\perp = U\)
+\item
+  \(U \oplus U^\perp = V\) iff \(U + U^\perp = V\) iff
+  \(\operatorname{rad}(U) = 0\)
+\item
+  It's much harder to show that an orthogonal basis of \(U\) expands to
+  an orthogonal basis of \(V\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Structure of Quadratic Spaces}
+\phantomsection\label{structure-of-quadratic-spaces}
+We mention some results here without details.
+
+\begin{theorem}[Witt (\autocite{serre_course_1973} p.~31, chap.~4,
+sec.~1.5, theorem 3)]\protect\hypertarget{thm-witt}{}\label{thm-witt}
+
+Every injective metric-preserving map from a subspace \(U\) of a
+quadratic space \(V\) to another quadratic space \(W\) may be extended
+to a metric-preserving map from \(V\) to \(W\).
+
+\end{theorem}
+
+\begin{theorem}[Witt's cancellation (\autocite{serre_course_1973} p.~34,
+chap.~4, sec.~1.6, theorem
+4)]\protect\hypertarget{thm-witt-cancel}{}\label{thm-witt-cancel}
+
+\(f_1 \oplus g_1 \sim f_2 \oplus g_2\) and \(g_1 \sim g_2\) implies
+\(f_1 \sim f_2\).
+
+\end{theorem}
+
+\begin{theorem}[Witt's
+decomposition]\protect\hypertarget{thm-witt-decomposition}{}\label{thm-witt-decomposition}
+
+Every quadratic space \(V\) is a direct sum of:
+\(\operatorname{rad}(V)\), an anisotropic quadratic space (i.e.~its
+nonzero vectors has nonzero norms) and a split quadratic space
+(i.e.~\(U = U^\perp\), full of hyperbolas)
+
+\end{theorem}
+\end{frame}
+
+\subsection{The Common Represented Element
+Method}\label{the-common-represented-element-method}
+
+\begin{frame}{Another Invariant: The Range}
+\phantomsection\label{another-invariant-the-range}
+On an abitrary field \(K\), we say that a quadratic form \(f\)
+\emph{represent}s \(a \in K\) if there exists a nonzero \(v \in V\) such
+that \(f(v) = a\).
+
+\begin{itemize}
+\item
+  The range of \(f\), \(\operatorname{Im}f\), is an invariant.
+\item
+  It may be viewed in \(\{0\} \cup K^\times / (K^{\times})^2\).
+\item
+  Is it complete?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Insights from the Range}
+\phantomsection\label{insights-from-the-range}
+\begin{proposition}[(\autocite{serre_course_1973} p.~33, chap.~4,
+sec.~1.6, corollary
+1)]\protect\hypertarget{prp-range}{}\label{prp-range}
+
+Let \(a \in K^\times\). TFAE:
+
+\begin{itemize}
+\tightlist
+\item
+  \(f\) represents \(a\)
+\item
+  \(f \sim g \oplus (Z \mapsto a Z^2)\) where \(g\) is of rank
+  \(\operatorname{rk}f - 1\).
+\item
+  \(f \oplus (Z \mapsto -a Z^2)\) represents \(0\).
+\end{itemize}
+
+\end{proposition}
+
+\begin{itemize}
+\tightlist
+\item
+  Insight from line 3: To understand the range, it suffices to examine
+  when a quadratic form represents \(0\).
+\item
+  Insight from line 2 (\emph{the common represented element method}):
+  Say \(f_1\), \(f_2\) are nozero and represent a common
+  \(a \in K^\times\). Reducing \(Z \mapsto aZ^2\), if only \(g_1\) and
+  \(g_2\) also share a common represented element\ldots{}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Insights from the Range}
+\phantomsection\label{insights-from-the-range-1}
+\begin{itemize}
+\item
+  Sadly, range is not always a complete invariant.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Otherwise all indefinite quadratic forms over \(\mathbb R\) are
+    equivalent, absurd.
+  \end{itemize}
+\item
+  But we shall show that when \(K = \mathbb Q_p\) and moreover
+  \(K = \mathbb Q\), it plays a subtle role in the classification of
+  quadratic forms. This requires a more precise characterization of the
+  range.
+\item
+  In fact, if only there are some simple invariants that can fully
+  determines the range\ldots{}
+\end{itemize}
+\end{frame}
+
+\subsection{Global and Local
+Equivalence}\label{global-and-local-equivalence}
+
+\begin{frame}{Global and Local Equivalence}
+\phantomsection\label{global-and-local-equivalence-1}
+\begin{itemize}
+\item
+  Fact: Field extensions preserve the equivalence of quadratic forms.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Example: Equivalence classes are finer over \(\mathbb R\) than those
+    over \(\mathbb C\).
+  \end{itemize}
+\item
+  \(\mathbb Q \hookrightarrow \mathbb R\), thus the rank and the
+  signature are invariants. But we need more information to classify.
+\item
+  Other field extension of \(\mathbb Q\)?
+  \(\mathbb Q \hookrightarrow \mathbb Q_p\)
+\end{itemize}
+
+\begin{theorem}[Hasse-Minkowski (\autocite{serre_course_1973} p.~41,
+chap.~4, sec.~3.1, theorem
+8)]\protect\hypertarget{thm-hasse-minkowski}{}\label{thm-hasse-minkowski}
+
+\(f\) represents \(0\) over \(\mathbb Q\) iff it represents \(0\) over
+\(\mathbb R\) and all \(\mathbb Q_p\).
+
+\end{theorem}
+
+\begin{itemize}
+\tightlist
+\item
+  To gain more invariants for \(\mathbb Q\) (especially those related to
+  the range), let's classify quadratic forms over \(\mathbb Q_p\) first.
+\end{itemize}
+\end{frame}
+
+\section{\texorpdfstring{Quadratic Forms over \(\mathbb Q_p\) and
+\(\mathbb Q\)}{Quadratic Forms over \textbackslash mathbb Q\_p and \textbackslash mathbb Q}}\label{quadratic-forms-over-mathbb-q_p-and-mathbb-q}
+
+\subsection{\texorpdfstring{Structure of
+\(\mathbb Q_p^\times / (\mathbb Q_p^\times)^2\)}{Structure of \textbackslash mathbb Q\_p\^{}\textbackslash times / (\textbackslash mathbb Q\_p\^{}\textbackslash times)\^{}2}}\label{structure-of-mathbb-q_ptimes-mathbb-q_ptimes2}
+
+\begin{frame}{Structure of \(\mathbb Q_p^\times\)}
+\phantomsection\label{structure-of-mathbb-q_ptimes}
+\begin{itemize}
+\item
+  \(\mathbb Q_p^\times \cong \mathbb Z \times \mathbb Z_p^\times\) by
+  collecting common powers of \(p\)
+\item
+  \(\mathbb Z_p^\times \cong \mathbb F_p^\times \times (1 + p \mathbb Z_p)\)
+  by \(a \mapsto a \bmod p\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    It splits by the explicit construction of a primitive root of order
+    \(p\), via Hensel's lemma / Teichmüller lift
+    \(\lim_{n \to \infty} g^{p^n}\), where \(g\) is a primitive root of
+    \(\mathbb F_p^\times\).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Structure of \(1 + p \mathbb Z_p\) and the log / exp map}
+\phantomsection\label{structure-of-1-p-mathbb-z_p-and-the-log-exp-map}
+For \(p \neq 2,\, \alpha \geq 1\) or \(p = 2,\, \alpha \geq 2\): \[
+\begin{aligned}
+1 + p^\alpha \mathbb Z_p &\cong (p^\alpha \mathbb Z_p, +) \cong (\mathbb Z_p, +) \\
+1 + p^\alpha a &\mapsto \log(1+p^\alpha a)
+\end{aligned}
+\]
+
+For \(p=2,\,\alpha = 1\),
+
+\begin{itemize}
+\item
+  \[
+  1 + 2 \mathbb Z_2 \cong \mathbb Z / 2 \mathbb Z \times (1 + 4 \mathbb Z_2)
+  \]
+
+  \begin{itemize}
+  \item
+    by \(1 + 2a \mapsto a \bmod 2\)
+  \item
+    It splits by the explicit construction of a primitive root of order
+    \(2\): \((-1,-1,\dots) = \sum_{n=0}^{+\infty} 2^n\).
+  \end{itemize}
+\item
+  \((1 + 4 \mathbb Z_2) \cong (4 \mathbb Z_2, +) \cong (\mathbb Z_2, +)\)
+  by the log map
+\item
+  Thus \[
+  1 + 2 \mathbb Z_2 \cong \mathbb Z / 2 \mathbb Z \times (\mathbb Z_2, +)
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quadratic residues of \(\mathbb Q_p\)}
+\phantomsection\label{quadratic-residues-of-mathbb-q_p}
+For \(p \neq 2\):
+
+\begin{itemize}
+\item
+  \(\mathbb Q_p^\times \cong \mathbb Z \times \mathbb F_p^\times \times (\mathbb Z_p, +)\)
+\item
+  \(2\) is a unit in \(\mathbb Z_p\). Thus
+  \(a \in (\mathbb Q_p^\times)^2\) iff \(\nu_p(a) \bmod 2 = 0\) and
+  \(a \bmod p \in \mathbb F_p^\times\) is a quadratic residue.
+\item
+  \(\mathbb Q_p^\times / (\mathbb Q_p^\times)^2 \cong \mathbb Z / 2\mathbb Z \times \mathbb Z / 2\mathbb Z\),
+  generated by \(p\) and \(a\), where \(a \bmod p\) is a quadratic
+  nonresidue．
+\end{itemize}
+
+For \(p = 2\):
+
+\begin{itemize}
+\item
+  \(\mathbb Q_2^\times \cong \mathbb Z \times \mathbb Z / 2 \mathbb Z \times (\mathbb Z_2, +)\)
+\item
+  Quadratic residues of \((\mathbb Z_2, +)\) are \((2 \mathbb Z_2, +)\),
+  which pulls back to \(1 + 8 \mathbb Z_2\).
+\item
+  \(a \in (\mathbb Q_2^\times)^2\) iff \(\nu_2(a) \bmod 2 = 0\) and
+  \(a \bmod 8 \equiv 1\).
+\item
+  \(\mathbb Q_2^\times / (\mathbb Q_2^\times)^2 \cong \mathbb Z / 2\mathbb Z \times \mathbb Z / 2\mathbb Z \times \mathbb Z / 2\mathbb Z\),
+  generated by \(2\), \(3\) and \(5\).
+\end{itemize}
+\end{frame}
+
+\subsection{The Hilbert Symbol}\label{the-hilbert-symbol}
+
+\begin{frame}{The Hilbert Symbol}
+\phantomsection\label{the-hilbert-symbol-1}
+The Hilbert symbol over \(\mathbb Q_p\) is defined as: \[
+\langle a, b \rangle := \begin{cases}
+  1 & \text{if } a X^2 + b Y^2 = Z^2 \text{ has a nonzero solution in } \mathbb Q_p \\
+  -1 & \text{otherwise}
+\end{cases}
+\] The symbol may be also viewed in
+\(\{0\} \cup \mathbb Q_p^\times / (\mathbb Q_p^\times)^2\) or even more
+simply in \(\mathbb Q_p^\times / (\mathbb Q_p^\times)^2\) when working
+with non-degenerate forms.\footnote<.->[frame]{Lots of the resources,
+  even \autocite{serre_course_1973}, switch between these three views
+  without enough warning. Sadly we shall also commit this ususal mild
+  sin (and have already done to other innocent invariants such as the
+  discriminant\ldots)}
+\end{frame}
+
+\begin{frame}{Properties of the Hilbert Symbol}
+\phantomsection\label{properties-of-the-hilbert-symbol}
+\begin{itemize}
+\item
+  \(\langle a, -a \rangle = 1\)
+\item
+  \(\langle a, b \rangle = \langle b, a \rangle\) (symmetric)
+\item
+  If \(\langle a_2,b \rangle = 1\), then
+  \(\langle a_1 a_2, b \rangle = \langle a_1,b \rangle\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In fact,
+    \(\langle a_1 a_2, b \rangle = \langle a_1, b \rangle \langle a_2, b \rangle\)
+    (multiplicatively bilinear)
+  \end{itemize}
+\item
+  \(\langle a, b \rangle = 1\) for all \(b\) iff \(a \in \mathbb Q_p^2\)
+  (nondegenerate)
+\item
+  the Hilbert symbol is a non-degenerate symmetric bilinear form of the
+  \(\mathbb F_2\)-vector space
+  \(\mathbb Q_p^\times / (\mathbb Q_p^\times)^2\)
+
+  \begin{itemize}
+  \item
+    This is a non-trivial result and is said to be, to some extent, a
+    generalization of the law of quadratic reciprocity in local class
+    field theory.
+  \item
+    To show above over \(\mathbb Q_p\), we develop an explicit formula
+    for the Hilbert symbol.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Explicit Formula of the Hilbert Symbol}
+\phantomsection\label{the-explicit-formula-of-the-hilbert-symbol}
+\begin{theorem}[(\autocite{serre_course_1973} p.~20, chap.~3, sec.~1.2,
+theorem
+1)]\protect\hypertarget{thm-hilbert-symbol}{}\label{thm-hilbert-symbol}
+
+Say \(a = p^\alpha u\) and \(b = p^\beta v\) are \(p\)-adic numbers
+where \(u,v \in \mathbb Z_p^\times\), then \[
+\langle a, b \rangle = (-1)^{\alpha \cdot \beta \cdot \frac{p-1}{2}} \left(\dfrac{u}{p}\right)^\beta \left(\dfrac{v}{p}\right)^\alpha \text{ if } p \neq 2
+\] We omit the case \(p=2\). It's a tedious modification of the above
+formula.
+
+\end{theorem}
+
+\begin{longtable}[]{@{}lcccc@{}}
+\toprule\noalign{}
+& \(0\) & \(1\) & \(a\) & \(p\) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+& \(0\) & \(1\) & \(a\) & \(p\) \\
+\midrule\noalign{}
+\endhead
+\(0\) & \(1\) & \(1\) & \(1\) & \(1\) \\
+\(1\) & & \(1\) & \(1\) & \(1\) \\
+\(a\) & & & \(1\) & \(-1\) \\
+\(p\) & & & & \((-1)^{\frac{p-1}{2}}\) \\
+\bottomrule\noalign{}
+\caption{Table of Hilbert symbol, \(p \neq 2\)}\tabularnewline
+\end{longtable}
+\end{frame}
+
+\subsection{Invariants that Determines the
+Range}\label{invariants-that-determines-the-range}
+
+\begin{frame}{The Hasse Invariant}
+\phantomsection\label{the-hasse-invariant}
+Recall that we have reduced to work with non-degenerate diagonalized
+quadratic forms of rank \(n\). Recall that the discriminant \[
+d(f) = a_1 a_2 \dots a_n \in \mathbb Q_p^\times / (\mathbb Q_p^\times)^2
+\] is an invariant.
+
+\begin{itemize}
+\item
+  Define the \emph{Hasse invariant}
+  \(\varepsilon(f) := \prod_{1 \leq i < j \leq n} \langle a_i, a_j \rangle\)
+\item
+  It is an invariant: \[
+  \varepsilon(f) = \prod_{1 \leq i < j \leq n} \langle a_i, a_j \rangle = \varepsilon(f_1) \prod_{2 \leq j \leq n} \langle a_1, a_j \rangle = \varepsilon(f_1) \cdot \langle a_1, a_1 d(f) \rangle
+  \] Thus \(\varepsilon\) is preserved under \emph{contiguous} change of
+  orthogonal bases (fixes one of the vector of the basis)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For \(n \geq 3\), orthorgonal bases are transitive under contiguous
+    change (\autocite{serre_course_1973} p.~30, sec.~4.1.4, theorem 2)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\(d\) and \(\varepsilon\) Determine the Range}
+\phantomsection\label{d-and-varepsilon-determine-the-range}
+\begin{theorem}[(\autocite{serre_course_1973} p.~36, chap.~4, sec.~2.2,
+theorem
+6)]\protect\hypertarget{thm-qp-range-determine}{}\label{thm-qp-range-determine}
+
+For a non-degenerate quadratic form \(f\) of rank \(n\) over
+\(\mathbb Q_p\), the range of \(f\) is determined by the discriminant
+\(d := d(f)\) and the Hasse invariant \(\varepsilon := \varepsilon(f)\).
+
+Or, in detail, \(f\) represents \(0\) iff:
+
+\begin{itemize}
+\tightlist
+\item
+  For \(n=2\): \(d=-1\)
+\item
+  For \(n=3\): \(\langle -1,-d \rangle = \varepsilon\)
+\item
+  For \(n=4\): \(d \neq 1\) or \(d=1\) and
+  \(\varepsilon = \langle -1,-1 \rangle\)
+\item
+  For \(n=5\): no conditions
+\end{itemize}
+
+\end{theorem}
+
+Recall that \(f\) represents
+\(a \in \mathbb Q_p^\times / (\mathbb Q_p^\times)^2\) iff
+\(f \oplus (Z \mapsto -a Z^2)\) represents \(0\), thus above fully
+characterizes the range.
+\end{frame}
+
+\subsection{Classification}\label{classification}
+
+\begin{frame}{Classification of Quadratic Forms over \(\mathbb Q_p\)}
+\phantomsection\label{classification-of-quadratic-forms-over-mathbb-q_p}
+\begin{theorem}[(\autocite{serre_course_1973} p.~39, chap.~4, sec.~2.3,
+theorem
+7)]\protect\hypertarget{thm-qp-classification}{}\label{thm-qp-classification}
+
+Two non-degenerate quadratic forms of rank \(n\) over \(\mathbb Q_p\)
+are equivalent iff they have the same discriminant \(d\) and Hasse
+invariant \(\varepsilon\).
+
+\end{theorem}
+
+\begin{itemize}
+\item
+  \(f,g\) have same \(d\) and \(\varepsilon\), thus have the same range.
+  Say they both represent
+  \(a \in \mathbb Q_p^\times / (\mathbb Q_p^\times)^2\).
+\item
+  Then \(f \sim f_1 \oplus (Z \mapsto a Z^2)\), where \(f_1\) is of rank
+  \(n-1\).
+\item
+  \(d\) and \(\varepsilon\) of \(f_1\) can be determined:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(d(f_1) = a d(f)\)
+  \item
+    \(\varepsilon(f_1) = \varepsilon(f) \cdot (a, a d(f))\) (shown when
+    discussing the invariance of \(\varepsilon\))
+  \end{itemize}
+\item
+  The same for \(g\). Thus \(f_1, g_1\) shares the same \(d\) and
+  \(\varepsilon\) (thus also their range). QED by induction.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Classification of Quadratic Forms over \(\mathbb Q\)}
+\phantomsection\label{classification-of-quadratic-forms-over-mathbb-q}
+\begin{theorem}[(\autocite{serre_course_1973} p.~39, chap.~4, sec.~2.3,
+theorem
+7)]\protect\hypertarget{thm-qp-classification}{}\label{thm-qp-classification}
+
+Two non-degenerate quadratic forms of rank \(n\) over \(\mathbb Q_p\)
+are equivalent iff they are equivalent over \(\mathbb R\) and over each
+\(\mathbb Q_p\).
+
+\end{theorem}
+
+\begin{itemize}
+\item
+  Say \(f,g\) are equivalent over each local field (\(\mathbb Q_p\) and
+  \(\mathbb R\)), thus they share the same range locally.
+\item
+  By Hasse-Minkowski theorem, they also share the same range globally
+  over \(\mathbb Q\).
+\item
+  Then \(f \sim f_1 \oplus (Z \mapsto a Z^2)\) globally, where \(f_1\)
+  is of rank \(n-1\). The same for \(g\).
+\item
+  \(f_1 \sim g_1\) locally by Witt's cancellation theorem. QED by
+  induction.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Problem Remains}
+\phantomsection\label{problem-remains}
+\begin{itemize}
+\item
+  Proof of the Hasse-Minkowski theorem
+
+  \begin{itemize}
+  \tightlist
+  \item
+    essentially needs some understanding of the global property of the
+    Hilbert symbol, which we have not discussed (cf.
+    \autocite{serre_course_1973})
+  \end{itemize}
+\item
+  Refine the theory for degenerate quadratic forms (relatively easy)
+\item
+  Enumerate all the equivalence classes of quadratic forms over
+  \(\mathbb Q_p\) and \(\mathbb Q\) (cf. \autocite{serre_course_1973})
+\item
+  To what extent can we use the common represented element method to
+  classify quadratic forms over other fields?
+\item
+  For which fields, the range of a quadratic form is a complete
+  invariant? (At least \(\mathbb R\) fails. \(\mathbb Q\),
+  \(\mathbb Q_p\)?)
+\item
+  What can we say about \(\mathbb Q^\times / (\mathbb Q^\times)^2\)?
+\item
+  Classification of quadratic forms over commutative rings
+  (e.g.~\(\mathbb Z\), \(\mathbb Z / m \mathbb Z\))
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{\transreferences}
+    \printbibliography[heading=none]
+\end{frame}
+
+\end{document}
