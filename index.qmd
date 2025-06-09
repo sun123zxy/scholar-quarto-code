@@ -13,7 +13,7 @@ I'm Xingyu Zhong, an undergraduate student major in Mathematics at Beijing Insti
 
 | Date | Title | Description | handouts | links |
 | :---: | :---: | :---: | :---: | :---: |
-| 2025/04/16 | Classification of Quardratic Forms over $\mathbb Q$ | 2025 spring *Algebraic Geometry* final presentation | [onsite (en)](/posts/20250416-ag-q-quadratic-form-classification/q-quadratic-form-classification.pdf), [latest (en)](https://blog.sun123zxy.top/posts/20250416-q-quadratic-form-classification/) | |
+| 2025/04/16 | Classification of Quadratic Forms over $\mathbb Q$ | 2025 spring *Algebraic Geometry* final presentation | [onsite (en)](/posts/20250416-ag-q-quadratic-form-classification/q-quadratic-form-classification.pdf), [latest (en)](https://blog.sun123zxy.top/posts/20250416-q-quadratic-form-classification/) | |
 | 2024/04/20 | 代数同构视角下的离散 Fourier 变换 | BIT & USTC undergraduate exchange for outstanding students major in mathematics | [onsite (zh)](/posts/20240420-utsc-dft/dft.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20240513-isodft/) | [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm) |
 | 2023/10/18 | 一元多项式的 Delta 判别式 | 2023 fall *Advanced Algebra II* course seminar | [onsite (zh)](/posts/20231018-aa2-discriminant/discriminant.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20231018-discriminant/) | |
 | 2023/08/01 | A Convolution-Oriented FFT Tutorial | BITACMCLUB 2023 summer training | [onsite (zh)](/posts/20240801-bitacm-fft/fft.pdf), [suppliment on bit reverse operation (zh)](/posts/20240801-bitacm-fft/supplement-on-bit-reverse.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20230928-dft/) | [news (zh)](https://cs.bit.edu.cn/xyxw/619906a5c812458b9d22a663b74e0dce.htm) |
