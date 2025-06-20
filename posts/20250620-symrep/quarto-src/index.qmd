@@ -1,0 +1,292 @@
+---
+title: Irreducible Representations of the Symmetric Group
+shorttitle: Irreducible Representations of $\mathcal S_n$
+subtitle: classified over the field of complex numbers $\mathbb C$ 
+author: "Xingyu Zhong"
+institute: "Beijing Institute of Technology"
+shortinstitute: "BIT"
+date: 2025/06/20
+lang: en
+bibliography: index.bib
+
+slide-level: 3
+
+format:
+  beamer:
+    toc: true
+---
+
+# Introduction & Constructions
+
+### Foreword
+
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\operatorname{id}}
+
+We show a concise path to the classification of the irreducible representations of the symmetric group $\mathcal S_n$ over the field of complex numbers $\mathbb C$.
+
+- mainly adapted from [@fulton_representation_2004, {section 4.2}], minor references to [@sagan_symmetric_2001, {chapter 2}]
+
+- Focus on the irreducibility of Specht modules
+
+- Modest knowledge of group theory is enough to understand the combinatorial part, though familiarity of the basics of complex representations of groups [@serre_linear_1977, {chapter 1--2}] and the group-algebra module perspective of representations is needed for other parts.
+
+### Young Tableaux
+
+- Idea: Understand the group by its action on combinatorial objects
+
+:::::{#fig-y layout-ncol="2"}
+
+:::{#fig-yd}
+$$
+\begin{matrix}
+\bullet & \bullet & \bullet & \bullet \\
+\bullet & \bullet & \bullet \\
+\bullet & \bullet
+\end{matrix}
+$$
+
+The Young diagram of shape $\lambda = (4, 3, 2)$
+:::
+
+:::{#fig-yt}
+$$
+\begin{matrix}
+2 & 3 & 9 & 8 \\
+5 & 4 & 6 \\
+7 & 1
+\end{matrix}
+$$
+
+A Young tableau $T = (\lambda \vdash n, \sigma \in \mathcal S_n)$, where $\lambda = (4, 3, 2)$, $\sigma=239854671$
+:::
+
+Young diagrams and Young tableaux
+:::::
+
+### $\mathcal S_n$ Acting on Young Tableaux
+
+- $g \in \mathcal S_n$ acts on the Young tableau $T$ of shape $\lambda$ by replacing the number $i$ with $g(i)$.
+
+  - i.e. $gT := (\lambda, g \sigma)$.
+
+  - The action is transitive.
+
+- $P_T \leq \mathcal S_n$ consists of permutations that preserve the content of each row of $T$, similarly $Q_T \leq \mathcal S_n$ preserves the columns.
+
+  - $P_T$ and $Q_T$ intersect trivially.
+  
+  - Their union generates the entire $\mathcal S_n$.
+
+- Relationship between $P_T$, $Q_T$ induced by different Young tableaux of the same shape:
+
+  - The process $gT \to gpT$ can be understood as performing an "effect" equivalent to a row permutation $p \in P_T$ on $T$
+
+  - $P_{gT} = g P_T g^{-1}$
+  
+  - $Q_{gT} = g Q_T g^{-1}$
+
+### Young Symmetrizers
+
+Let $\mathbb C[\mathcal S_n]$ be the complex group algebra of $S_n$, i.e. its complex regular representation. Define:
+
+- Row symmetrizer $a_T := \sum_{g \in P_T} g \in \mathbb C[\mathcal S_n]$
+
+- Column symmetrizer $b_T := \sum_{g \in Q_T} \sgn(g) g \in \mathbb C[\mathcal S_n]$
+
+- Young symmetrizer $c_T := a_T b_T$
+
+It is evident that for any $p \in P_T$, $q \in Q_T$, we have:
+
+- $p a_T = a_T p = a_T$
+
+- $q b_T = b_T q = \sgn(q) b_T$
+
+- $p c_T q = \sgn(q) c_T$
+
+  - Though it's nontrivial that $c_T$ is (almost) the only group algebra element satisfying this condition.
+
+### Tabloids
+
+Define the $\mathbb C [\mathcal S_n]$-module
+$$
+M_T := \mathbb C [\mathcal S_n] a_T
+$$
+
+- Acting on Young tableaux, $a_T T$ forgets labelings inside the rows of $T$.
+
+- It is the induced representation $1\uparrow_{P_T}^{\mathcal S_n}$ obtained by lifting the trivial representation of $P_T$ to $\mathcal S_n$.
+
+### Specht Modules
+
+The Specht module induced by a Young tableau $T$ is the $\mathbb C [\mathcal S_n]$-module
+$$
+V_T := \mathbb C[\mathcal S_n] c_T
+$$
+
+We shall show the following to classify the complex irreducible representations of $\mathcal S_n$:
+
+- Each Specht module is an irreducible representation of $\mathcal S_n$.
+  
+- Two Specht modules are isomorphic if and only if the Young tableaux inducing them have the same shape.
+  
+- Every irreducible representation of $\mathcal S_n$ is isomorphic to some Specht module.
+
+# Irreducibility of Specht Modules
+
+### S.R.D.C.^[Same Row, Different Column] for Young Tableaux of the Same Shape
+
+Below helps us to understand how $P_T Q_T$ acts on Young tableaux combinatorially.
+
+:::{#prp-srdc}
+
+Let $T, S$ be two Young tableaux of shape $\lambda$. If any pair of numbers in the same row of $T$ falls into different columns in $S$, then there exist $p \in P_T, q' \in Q_S$ such that $pT = q'S$.
+:::
+
+$$
+\begin{matrix}
+T &
+\begin{matrix}
+i & j & k & l \\
+* & * & * \\
+* & *
+\end{matrix}
+& \xrightarrow{p_1 \in P_T} &
+\begin{matrix}
+l & k & i & j \\
+* & * & * \\
+* & *
+\end{matrix}
+& \xrightarrow{p_2 \in P_T} & \dots
+\\
+\\
+S &
+\begin{matrix}
+l & * & * & j \\
+* & * & i \\
+* & k
+\end{matrix}
+& \xrightarrow{q'_1 \in Q_S} &
+\begin{matrix}
+l & k & i & j \\
+* & * & * \\
+* & *
+\end{matrix}
+& \xrightarrow{q'_2 \in Q_S} & \dots
+\end{matrix}
+$$
+
+### Consequences
+
+- Say $S = gT$, whence $q' = g q g^{-1}$ with $q \in Q_T$. Then $pT = q'S = gqT$, so $g=p q^{-1} \in P_T Q_T$.
+
+- The converse is also true: for any $p \in P_T$, $q \in Q_T$, $pT$ and $qT$ are S.R.D.C.
+
+- $T,gT$ being S.R.D.C. is an iff condition for $g \in P_T Q_T$.
+
+### Uniqueness of the Young Symmetrizer
+
+:::{#prp-c-unique}
+
+Let $c \in \mathbb C[\mathcal S_n]$ satisfy $p c q = \sgn(q) c$ for any $p \in P_T$, $q \in Q_T$. Then $c \in \mathbb C c_T$, i.e. $c$ is unique up to scalar multiplication.
+:::
+
+Say $c = \sum_{g \in \mathcal S_n} n_g g$,
+
+- $n_{pgq} = \sgn(q) n_g$
+
+- $n_g$ for $g \in P_T Q_T$ is fixed up to a scalar multiplication.
+
+- $n_g$ for $g \notin P_T Q_T$ is zero. Our combinatorial interpretation guarantees that there must be a pair of numbers $(i,j)$ fall into the same row in $T$ and the same column in $gT$. The alternating property of $c$ results in $n_g = - n_g$ and thus $n_g = 0$.
+
+### Idempotenty of $c_T$
+
+:::{#cor-cxc}
+
+$c_T x c_T \in \mathbb C c_T$ holds for any $x \in \mathbb C[\mathcal S_n]$.
+:::
+
+- In particular, $c_T^2 = \alpha c_T$ for some $\alpha \in \mathbb C$.
+
+- It can be shown that $\alpha = n! / \dim V_T$.
+
+### Irreducibility of Specht Modules
+
+:::{#prp-specht-irr}
+
+The Specht module $V_T := \mathbb C[\mathcal S_n] c_T$ is an irreducible representation of $\mathcal S_n$.
+:::
+
+Assume $V_T$ has a subrepresentation $W \subseteq V_T$. Then the subspace:
+$$
+c_T W \subset c_T V_T = c_T \mathbb C[\mathcal S_n] c_T \subset \mathbb C c_T
+$$
+is a one-dimensional subspace. Thus, we consider the following two cases:
+
+- $c_T W = \mathbb C c_T$. In this case:
+$$
+V_T = \mathbb C[\mathcal S_n] c_T = \mathbb C[\mathcal S_n] (\mathbb C c_T) = \mathbb C[\mathcal S_n] W = W
+$$
+
+- $c_T W = 0$. In this case, for any $w = x c_T \in W$, we have $w^2 = x c_T w = 0$, i.e., $W^2 = 0$. We know that there are no non-zero nilpotent left ideals in the finite-dimensional semisimple group algebra $\mathbb C[\mathcal S_n]$, so $w=0$, $W=0$.
+
+# Classification of the Irreducible Representations {#sec-classification}
+
+### A Brief Outline of Classification
+
+Are Specht modules the only irreducible representations of $\mathcal S_n$?
+
+$$
+\begin{aligned}
+\# \text{ irreducible representations}
+&= \# \text{ conjugacy classes of } \mathcal S_n \\
+&= \# \text{ integer partitions of } n
+\end{aligned}
+$$
+
+It suffices to show that:
+
+- Two Specht modules are isomorphic if and only if the Young tableaux inducing them have the same shape.
+
+  - $V_T \cong V_{gT}$ by direct construction $x \mapsto x g^{-1}$
+
+  - For the converse, refine the S.R.D.C. condition to adapt Young tableaux of different shapes
+
+This completes the classification of the irreducible representations of $\mathcal S_n$.
+
+### Wrap up
+
+Classification of complex irreducible representations of $\mathcal S_n$:
+
+- all Specht modules $V_T$, where $T$ is a Young tableau of shape $\lambda \vdash n$.
+
+- Two Specht modules are isomorphic if and only if the Young tableaux inducing them have the same shape.
+
+:::{.remark}
+
+## What we've benefited from working over $\mathbb C$
+
+- We've used the semisimplicity of the group algebra $\mathbb C[\mathcal S_n]$ to show the irreducibility of Specht modules.
+
+- We need the result over $\mathbb C$ that the number of complex irreducible representations of a group equals the number of conjugacy classes of the group.
+
+- Other arguments do not rely on any special property of $\mathbb C$.
+:::
+
+### Problem Remains
+
+- Dimension of Specht modules $V_T$
+
+  - the hook-length formula for the number of standard Young tableaux of shape $\lambda$
+
+- Explicit construction of a basis of Specht modules
+
+- A more natural combinatorial interpretation of Specht modules
+
+- Classification over other fields, e.g. $\mathbb F_p$
+
+### 
+
+Thank you for your attention!
