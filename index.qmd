@@ -5,30 +5,10 @@ format:
     page-layout: full
 ---
 
-I'm Xingyu Zhong, an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly).
+I'm Xingyu Zhong (钟星宇), an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly).
 
-- [CV (zh)](/posts/cv/resume-zh.pdf)
+- [CV (en, web)](cv.qmd)
 
-## Talks
+- [CV (zh, pdf)](/posts/cv/resume-zh.pdf)
 
-| Date | Title | In the activity of | Handouts | Remarks |
-| :---: | :---: | :---: | :---: | :---: |
-| 2025/09 (TBD) | Classification of Quadratic Forms over $\mathbb Q$ | BIT--UTokyo undergraduate exchange for outstanding students major in mathematics | | Joint work with Shubin Xue, the onsite talk will be given by him |
-| 2025/06/20 | Irreducible Representations of the Symmetric Group | Selection presentation for BIT--UTokyo undergraduate exchange for outstanding students major in mathematics | [onsite (en)](/posts/20250620-symrep/symrep.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20250606-symrep/) | |
-| 2025/04/16 | Classification of Quadratic Forms over $\mathbb Q$ | 2025 spring *Algebraic Geometry* final presentation | [onsite (en)](/posts/20250416-ag-q-quadratic-form-classification/q-quadratic-form-classification.pdf), [latest (en)](https://blog.sun123zxy.top/posts/20250416-q-quadratic-form-classification/) | |
-| 2024/04/20 | 代数同构视角下的离散 Fourier 变换 | BIT--USTC undergraduate exchange for outstanding students major in mathematics | [onsite (zh)](/posts/20240420-utsc-dft/dft.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20240513-isodft/) | [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm) |
-| 2023/10/18 | 一元多项式的 Delta 判别式 | 2023 fall *Advanced Algebra II* course seminar | [onsite (zh)](/posts/20231018-aa2-discriminant/discriminant.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20231018-discriminant/) | |
-| 2023/08/01 | A Convolution-Oriented FFT Tutorial | BITACMCLUB 2023 summer training | [onsite (zh)](/posts/20240801-bitacm-fft/fft.pdf), [suppliment (zh)](/posts/20240801-bitacm-fft/supplement-on-bit-reverse.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20230928-dft/) | [news (zh)](https://cs.bit.edu.cn/xyxw/619906a5c812458b9d22a663b74e0dce.htm) |
-| 2023/05/18 | 空间填充曲线与集合势理论 | 2023 spring *Mathematical Analysis II* course seminar | [onsite (zh)](/posts/20230518-ma2-space-filling-curve/space-filling-curve.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20230519-hilbert/) | |
-| 2023/04/23 | Wallis 公式、Stirling 公式与正态分布 | 2023 spring *Mathematical Analysis II* course seminar | [onsite (zh)](/posts/20230423-ma2-stirling/stirling.pdf), [latest (zh)](https://blog.sun123zxy.top/posts/20230423-stirling/) | |
-| 2022/12/13 | 有限覆盖定理与实数理论 | 2022 fall *Mathematical Analysis I* course seminar | [latest (zh)](https://blog.sun123zxy.top/posts/20221213-cover/) | |
-
-## Attendances
-
-| Date | Title | Description | Role | Remarks |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| 2025/09 (TBD) | BIT--UTokyo undergraduate exchange for outstanding students major in mathematics | | (upcoming) Attendance | |
-| 2025/07/01--2025/07/20 | BICMR--RUC algebra and formalization summer school | 代数与形式化数学暑期学校 | (upcoming) Attendance | [link (zh)](https://mp.weixin.qq.com/s?__biz=MzkzOTE3NTU4Mw==&mid=2247511290&idx=1&sn=07b8d63c648c9a4d82fb892e8d6d81bf) |
-| 2025/02/02--2025/02/15 | 2025 FRP Winter Programme in Mordern Advanced Deep Learning | A two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program. | Full attendance, Special award winner (3 out of 15) | | 
-| 2024/09/30 | ComBIT24--StanleyFest | A conference on combinatorics at BIT 2024 | Attendance | [link (zh/en)](https://math.bit.edu.cn/kyxs/xshy/2fcc86015cae44c6afd43bab06660018.htm) |
-| 2024/04/20 | BIT--USTC undergraduate exchange for outstanding students major in mathematics | | Speaker, Attendance | [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm) |
+{{< include about/talks.qmd >}}

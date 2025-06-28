@@ -1,0 +1,12 @@
+---
+title: "Curriculum Vitae"
+format:
+  html:
+    page-layout: full
+---
+
+{{< include about/info.qmd >}}
+
+{{< include about/education.qmd >}}
+
+{{< include about/talks.qmd >}}

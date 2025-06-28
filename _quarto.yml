@@ -1,7 +1,7 @@
 project:
   type: website
   render: 
-    - "./index.qmd"
+    - "./*.qmd"
 
 website:
   site-url: "https://scholar.sun123zxy.top/"
