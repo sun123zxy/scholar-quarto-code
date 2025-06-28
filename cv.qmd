@@ -1,8 +1,7 @@
 ---
 title: "Curriculum Vitae"
 format:
-  html:
-    page-layout: full
+  html: default
   pdf: default
 ---
 
@@ -10,4 +9,8 @@ format:
 
 {{< include about/education.qmd >}}
 
-{{< include about/talks.qmd >}}
+{{< include about/competitions.qmd >}}
+
+{{< include about/experience.qmd >}}
+
+{{< include about/skills.qmd >}}

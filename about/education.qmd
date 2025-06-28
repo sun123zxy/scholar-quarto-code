@@ -1,25 +1,23 @@
 ## Education
 
-### Undergraduate
+### 2022/09--2026/06 | Beijing Institute of Technology | Bachelor of Mathematics
 
-**2022/09 -- 2026/06 (ongoing) | Beijing Institute of Technology | Bachelor of Mathematics**
-
-**Grades:** (by the end of 5th semester)
+#### Grades (by the end of 5th semester)
 
 - **GPA:** 3.9 / 4.0 (93.6)
 - **GPA Ranking:** 1 / 27
 - **Overall Ranking:** 1 / 27
-- Obtain 90+ scores in almost all core math courses
+- Obtain 90+ scores in almost all the core courses in mathematics
 - Obtain 80+ scores in all courses
 
-**Undergraduate Thesis:** (intention)
+#### Undergraduate Thesis (WIP)
 
-- Supervisor: Prof. Xun Xie (谢迅)
-- Studying Area: algebraic groups, Lie algebras, Young tableaux
+- **Advisor:** Prof. Xun Xie (谢迅)
+- **Studying Area:** algebraic groups, Lie algebras, Young tableaux
 
-**Awards:**
+#### Awards
 
-:::{.list-table}
+:::{.list-table widths="1,2,3,3"}
 
 * - Date
   - Cycle
@@ -28,18 +26,20 @@
 
 * - 2023/12
   - 2022--2023
-  - Model Student <br> 优秀学生标兵
+  - Model Student  
+    优秀学生标兵
   - Bejing Institute of Technology
 
 * - 2024/12
   - 2023--2024
-  - Excellent Student <br> 三好学生
+  - Outstanding Student  
+    三好学生
   - Bejing Institute of Technology
 :::
 
-**Scholarships:**
+#### Scholarships
 
-:::{.list-table}
+:::{.list-table widths="1,2,3,3"}
 
 * - Date
   - Cycle
@@ -48,7 +48,8 @@
 
 * - 2023/12
   - 2022--2023
-  - National Scholarship <br> 国家奖学金
+  - National Scholarship  
+    国家奖学金
   - Ministry of Education, PRC
 
 * - 2025/03
@@ -57,7 +58,8 @@
   - Samsung Electronics China
 
 * - 2022--2025
-  - 1st--5th semester <br> (for 5 times)
+  - 1st--5th semester  
+    (for 5 times)
   - First Class Scholarship
   - Bejing Institute of Technology
 :::

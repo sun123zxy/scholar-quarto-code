@@ -1,0 +1,147 @@
+## Talks
+
+:::{.list-table widths="1,6,2"}
+
+* - Date
+  - Title
+  - Links
+
+* - 2025/09 (TBD)
+  - **Classification of Quadratic Forms over $\mathbb Q$**  
+  - 
+* - []{colspan=3}
+    - BIT--UTokyo undergraduate exchange for outstanding students major in mathematics
+    - Joint work with Shubin Xue. The onsite talk will be given by him.
+
+* - 2025/06/20
+  - **Irreducible Representations of the Symmetric Group**
+  - [onsite (en)](/posts/20250620-symrep/symrep.pdf) /
+    [latest (zh)](https://blog.sun123zxy.top/posts/20250606-symrep/)
+* - []{colspan=3}
+    - Selection presentation for BIT--UTokyo undergraduate exchange for outstanding students major in mathematics
+
+* - 2025/04/16
+  - **Classification of Quadratic Forms over $\mathbb Q$**
+  - [onsite (en)](/posts/20250416-ag-q-quadratic-form-classification/q-quadratic-form-classification.pdf) /
+    [latest (en)](https://blog.sun123zxy.top/posts/20250416-q-quadratic-form-classification/)
+* - []{colspan=3}
+    - 2025 spring *Algebraic Geometry* final presentation
+    - **Lecturer:** Prof. Yangyu Fan (范洋宇)
+
+* - 2024/04/20
+  - **DFT from the Perspective of Algebra Isomorphism**  
+    代数同构视角下的离散 Fourier 变换
+  - [onsite (zh)](/posts/20240420-utsc-dft/dft.pdf) /
+    [latest (zh)](https://blog.sun123zxy.top/posts/20240513-isodft/)  
+    [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm)
+* - []{colspan=3}
+    - BIT--USTC undergraduate exchange for outstanding students major in mathematics
+    - **Mentor:** Prof. Peng Cao (曹鹏)
+
+* - 2023/10/18
+  - **The $\Delta$ Discriminant of Univariate Polynomials**  
+    一元多项式的 Delta 判别式
+  - [onsite (zh)](/posts/20231018-aa2-discriminant/discriminant.pdf) /
+    [latest (zh)](https://blog.sun123zxy.top/posts/20231018-discriminant/)
+* - []{colspan=3}
+    - 2023 fall *Advanced Algebra II* course seminar
+    - **Lecturer:** Prof. Peng Cao (曹鹏)
+
+* - 2023/08/01
+  - **A Convolution-Oriented FFT Tutorial**
+  - [onsite (zh)](/posts/20240801-bitacm-fft/fft.pdf) /
+    [suppliment (zh)](/posts/20240801-bitacm-fft/supplement-on-bit-reverse.pdf) /
+    [latest (zh)](https://blog.sun123zxy.top/posts/20230928-dft/)  
+    [news (zh)](https://cs.bit.edu.cn/xyxw/619906a5c812458b9d22a663b74e0dce.htm)
+* - []{colspan=3}
+    - BITACMCLUB 2023 summer training
+
+* - 2023/05/18
+  - **Space Filling Curves and Cardinality**  
+    空间填充曲线与集合势理论
+  - [onsite (zh)](/posts/20230518-ma2-space-filling-curve/space-filling-curve.pdf)
+    [latest (zh)](https://blog.sun123zxy.top/posts/20230519-hilbert/)
+* - []{colspan=3}
+    - 2023 spring *Mathematical Analysis II* course seminar
+    - Joint work with Chong Ning
+    - **Lecturer:** Prof. Zhentao Lv (吕珍涛)
+
+* - 2023/04/23
+  - **Wallis Product, Stirling's Approximation and Guassian Distributions**  
+    Wallis 公式、Stirling 公式与正态分布
+  - [onsite (zh)](/posts/20230423-ma2-stirling/stirling.pdf) /
+    [latest (zh)](https://blog.sun123zxy.top/posts/20230423-stirling/)
+* - []{colspan=3}
+    - 2023 spring *Mathematical Analysis II* course seminar
+    - **Lecturer:** Prof. Zhentao Lv (吕珍涛)
+
+* - 2022/12/13
+  - **Topics on the compactness of $\mathbb R$**  
+    有限覆盖定理与实数理论
+  - [latest (zh)](https://blog.sun123zxy.top/posts/20221213-cover/)
+* - []{colspan=3}
+    - 2022 fall *Mathematical Analysis I* course seminar
+    - **Lecturer:** Prof. Pengshuai Shi (史鹏帅)
+:::
+
+## Projects
+
+:::{.list-table widths=1,5,1}
+
+* - Date
+  - Project
+  - Links
+
+* - 2022/12 -- 2023/12
+  - **On the Uniqueness of the DFT matrix**  
+    将循环卷积转化为乘积的矩阵是否只有傅里叶矩阵？
+  - 
+* - []{colspan=3}
+    - Innovation and Entrepreneurship Training Program for College Students (Level: City & University)  
+      大学生创新创业训练计划（市、校级）
+    - It is shown that the DFT matrix, in some degree, is the only linear transformation that carries circulant convolution into pointwise multiplication.
+    - **Role:** Project Leader
+    - **Advisor:** Prof. Feng Zhang (张峰), School of Information and Electronics, BIT
+:::
+
+## Attendances
+
+:::{.list-table widths=1,5,1}
+
+* - Date
+  - Event
+  - Links
+
+* - 2025/09/08--2025/09/12
+  - **BIT--UTokyo undergraduate exchange for outstanding students major in mathematics**
+  - 
+* - []{colspan=3}
+    - **Role:** (upcoming) Attendance
+
+* - 2025/07/01--2025/07/20
+  - **BICMR--RUC algebra and formalization summer school**  
+    代数与形式化数学暑期学校
+  - [link (zh)](https://mp.weixin.qq.com/s?__biz=MzkzOTE3NTU4Mw==&mid=2247511290&idx=1&sn=07b8d63c648c9a4d82fb892e8d6d81bf)
+* - []{colspan=3}
+    - **Role:** (upcoming) Attendance
+
+* - 2025/02/02--2025/02/15
+  - **2025 FRP Winter Programme in Mordern Advanced Deep Learning**
+  - 
+* - []{colspan=3}
+    - A two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program.
+    - **Role:** Attendance / Special Award Winner (3 out of 15)
+
+* - 2024/09/30
+  - **ComBIT24--StanleyFest**
+  - [link (zh/en)](https://math.bit.edu.cn/kyxs/xshy/2fcc86015cae44c6afd43bab06660018.htm)
+* - []{colspan=3}
+    - A conference on combinatorics at BIT in 2024
+    - **Role:** Attendance
+
+* - 2024/04/20 -- 2024/04/21
+  - **BIT--USTC undergraduate exchange for outstanding students major in mathematics**
+  - [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm)
+* - []{colspan=3}
+    - **Role:** Speaker / Attendance
+:::

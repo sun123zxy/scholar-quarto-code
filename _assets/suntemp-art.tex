@@ -23,7 +23,7 @@ $else$
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 $endif$
 
-\usepackage[a4paper,top=2.75cm,bottom=2.25cm,left=2.75cm,right=2.75cm,marginparwidth=1.75cm]{geometry}
+\usepackage[a4paper,top=2cm,bottom=1.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
 \ifzh
     \setCJKmainfont{FandolSong-Regular.otf}[BoldFont = FandolHei-Regular.otf, ItalicFont = FandolKai-Regular.otf] % Hei represents bold, Kai represents italic
     \ctexset{
@@ -45,6 +45,10 @@ $endif$
 $tightlist.tex()$
 $tables.tex()$
 $graphics.tex()$
+
+% --- table spacing ---
+
+\renewcommand{\arraystretch}{1.5}
 
 % --- adjust code font size ---
 

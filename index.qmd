@@ -6,8 +6,8 @@ format:
 
 I'm Xingyu Zhong (钟星宇), an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly).
 
-- [CV (en, web)](cv.qmd)
+- [CV (en, web / pdf)](cv.qmd)
 
 - [CV (zh, pdf)](/posts/cv/resume-zh.pdf)
 
-{{< include about/talks.qmd >}}
+{{< include about/experience.qmd >}}
