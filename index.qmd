@@ -1,8 +1,7 @@
 ---
 title: "Welcome"
 format:
-  html:
-    page-layout: full
+  html: default
 ---
 
 I'm Xingyu Zhong (钟星宇), an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly).

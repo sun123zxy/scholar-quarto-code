@@ -9,3 +9,4 @@ website:
 metadata-files: 
   - "./_format.yml"
   - "./_article.yml"
+  - "./_filter.yml"

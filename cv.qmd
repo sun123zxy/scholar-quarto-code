@@ -1,8 +1,7 @@
 ---
 title: "Curriculum Vitae"
 format:
-  html:
-    page-layout: full
+  html: default
 ---
 
 {{< include about/info.qmd >}}
