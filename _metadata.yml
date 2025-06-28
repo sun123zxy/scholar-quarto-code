@@ -1,0 +1,5 @@
+format:
+  html:
+    grid:
+      body-width: 1000px
+      margin-width: 150px

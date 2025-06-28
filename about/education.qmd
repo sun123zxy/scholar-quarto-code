@@ -19,15 +19,45 @@
 
 **Awards:**
 
-| Date | Cycle | Award | Issued by |
-| :---: | :---: | :---: | :---: |
-| 2023/12 | 2022--2023 | Model Student <br> 优秀学生标兵 | Bejing Institute of Technology |
-| 2024/12 | 2023--2024 | Excellent Student <br> 三好学生 | Bejing Institute of Technology |
+:::{.list-table}
+
+* - Date
+  - Cycle
+  - Award
+  - Issued by
+
+* - 2023/12
+  - 2022--2023
+  - Model Student <br> 优秀学生标兵
+  - Bejing Institute of Technology
+
+* - 2024/12
+  - 2023--2024
+  - Excellent Student <br> 三好学生
+  - Bejing Institute of Technology
+:::
 
 **Scholarships:**
 
-| Date | Cycle | Scholarship | Issued by |
-| :---: | :---: | :----: | :---: |
-| 2023/12 | 2022--2023 | National Scholarship <br> 国家奖学金 | Ministry of Education, PRC |
-| 2025/03 | 2024--2025 | Samsung Scholarship | Samsung Electronics China |
-| | 1st--5th semester <br> (for 5 times) | First Class Scholarship | Bejing Institute of Technology |
+:::{.list-table}
+
+* - Date
+  - Cycle
+  - Scholarship
+  - Issued by
+
+* - 2023/12
+  - 2022--2023
+  - National Scholarship <br> 国家奖学金
+  - Ministry of Education, PRC
+
+* - 2025/03
+  - 2024--2025
+  - Samsung Scholarship
+  - Samsung Electronics China
+
+* - 2022--2025
+  - 1st--5th semester <br> (for 5 times)
+  - First Class Scholarship
+  - Bejing Institute of Technology
+:::
