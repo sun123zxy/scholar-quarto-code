@@ -4,20 +4,83 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "I’m Xingyu Zhong, an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly)."
+    "text": "I’m Xingyu Zhong (钟星宇), an undergraduate student major in Mathematics at Beijing Institute of Technology (enrolled in 2022). My intrest ranges from mathematics (algebra mainly) to computer science (TCS / web / proof assistant mainly)."
   },
   {
     "objectID": "index.html#talks",
     "href": "index.html#talks",
     "title": "Welcome",
     "section": "Talks",
-    "text": "Talks\n\n\n\nDate\nTitle\nIn the activity of\nHandouts\nRemarks\n\n\n\n\n2025/09 (TBD)\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\nJoint work with Shubin Xue, the onsite talk will be given by him\n\n\n2025/06/20\nIrreducible Representations of the Symmetric Group\nSelection presentation for BIT–UTokyo undergraduate exchange for outstanding students major in mathematics\nonsite (en), latest (zh)\n\n\n\n2025/04/16\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\n2025 spring Algebraic Geometry final presentation\nonsite (en), latest (en)\n\n\n\n2024/04/20\n代数同构视角下的离散 Fourier 变换\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\nonsite (zh), latest (zh)\nnews (zh)\n\n\n2023/10/18\n一元多项式的 Delta 判别式\n2023 fall Advanced Algebra II course seminar\nonsite (zh), latest (zh)\n\n\n\n2023/08/01\nA Convolution-Oriented FFT Tutorial\nBITACMCLUB 2023 summer training\nonsite (zh), suppliment (zh), latest (zh)\nnews (zh)\n\n\n2023/05/18\n空间填充曲线与集合势理论\n2023 spring Mathematical Analysis II course seminar\nonsite (zh), latest (zh)\n\n\n\n2023/04/23\nWallis 公式、Stirling 公式与正态分布\n2023 spring Mathematical Analysis II course seminar\nonsite (zh), latest (zh)\n\n\n\n2022/12/13\n有限覆盖定理与实数理论\n2022 fall Mathematical Analysis I course seminar\nlatest (zh)"
+    "text": "Talks\n\n\n\n\n\n\n\n\nDate\nTitle\nLinks\n\n\n\n\n2025/09 (TBD)\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\n\n\n\n\n\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\nJoint work with Shubin Xue. The onsite talk will be given by him.\n\n\n\n2025/06/20\nIrreducible Representations of the Symmetric Group\nonsite (en) / latest (zh)\n\n\n\nSelection presentation for BIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\n\n\n2025/04/16\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\nonsite (en) / latest (en)\n\n\n\n2025 spring Algebraic Geometry final presentation\nLecturer: Prof. Yangyu Fan (范洋宇)\n\n\n\n2024/04/20\nDFT from the Perspective of Algebra Isomorphism\n代数同构视角下的离散 Fourier 变换\nonsite (zh) / latest (zh)\nnews (zh)\n\n\n\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\nMentor: Prof. Peng Cao (曹鹏)\n\n\n\n2023/10/18\nThe \\(\\Delta\\) Discriminant of Univariate Polynomials\n一元多项式的 Delta 判别式\nonsite (zh) / latest (zh)\n\n\n\n2023 fall Advanced Algebra II course seminar\nLecturer: Prof. Peng Cao (曹鹏)\n\n\n\n2023/08/01\nA Convolution-Oriented FFT Tutorial\nonsite (zh) / suppliment (zh) / latest (zh)\nnews (zh)\n\n\n\nBITACMCLUB 2023 summer training\n\n\n\n2023/05/18\nSpace Filling Curves and Cardinality\n空间填充曲线与集合势理论\nonsite (zh) latest (zh)\n\n\n\n2023 spring Mathematical Analysis II course seminar\nJoint work with Chong Ning\nLecturer: Prof. Zhentao Lv (吕珍涛)\n\n\n\n2023/04/23\nWallis Product, Stirling’s Approximation and Guassian Distributions\nWallis 公式、Stirling 公式与正态分布\nonsite (zh) / latest (zh)\n\n\n\n2023 spring Mathematical Analysis II course seminar\nLecturer: Prof. Zhentao Lv (吕珍涛)\n\n\n\n2022/12/13\nTopics on the compactness of \\(\\mathbb R\\)\n有限覆盖定理与实数理论\nlatest (zh)\n\n\n\n2022 fall Mathematical Analysis I course seminar\nLecturer: Prof. Pengshuai Shi (史鹏帅)"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Welcome",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\n\n\n\nDate\nProject\nLinks\n\n\n\n\n2022/12 – 2023/12\nOn the Uniqueness of the DFT matrix\n将循环卷积转化为乘积的矩阵是否只有傅里叶矩阵？\n\n\n\n\nInnovation and Entrepreneurship Training Program for College Students (Level: City & University)\n大学生创新创业训练计划（市、校级）\nIt is shown that the DFT matrix, in some degree, is the only linear transformation that carries circulant convolution into pointwise multiplication.\nRole: Project Leader\nAdvisor: Prof. Feng Zhang (张峰), School of Information and Electronics, BIT"
   },
   {
     "objectID": "index.html#attendances",
     "href": "index.html#attendances",
     "title": "Welcome",
     "section": "Attendances",
-    "text": "Attendances\n\n\n\nDate\nTitle\nDescription\nRole\nRemarks\n\n\n\n\n\n2025/09 (TBD)\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\n(upcoming) Attendance\n\n\n\n\n2025/07/01–2025/07/20\nBICMR–RUC algebra and formalization summer school\n代数与形式化数学暑期学校\n(upcoming) Attendance\nlink (zh)\n\n\n\n2025/02/02–2025/02/15\n2025 FRP Winter Programme in Mordern Advanced Deep Learning\nA two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program.\nFull attendance, Special award winner (3 out of 15)\n\n\n\n\n2024/09/30\nComBIT24–StanleyFest\nA conference on combinatorics at BIT 2024\nAttendance\nlink (zh/en)\n\n\n\n2024/04/20\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\n\nSpeaker, Attendance\nnews (zh)"
+    "text": "Attendances\n\n\n\n\n\n\n\n\nDate\nEvent\nLinks\n\n\n\n\n2025/09/08–2025/09/12\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\n\n\n\nRole: (upcoming) Attendance\n\n\n\n2025/07/01–2025/07/20\nBICMR–RUC algebra and formalization summer school\n代数与形式化数学暑期学校\nlink (zh)\n\n\n\nRole: (upcoming) Attendance\n\n\n\n2025/02/02–2025/02/15\n2025 FRP Winter Programme in Mordern Advanced Deep Learning\n\n\n\n\nA two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program.\nRole: Attendance / Special Award Winner (3 out of 15)\n\n\n\n2024/09/30\nComBIT24–StanleyFest\nlink (zh/en)\n\n\n\nA conference on combinatorics at BIT in 2024\nRole: Attendance\n\n\n\n2024/04/20 – 2024/04/21\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\nnews (zh)\n\n\n\nRole: Speaker / Attendance"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Name: Xingyu Zhong (钟星宇)\nEmail: sun123zxy@qq.com\nHomepage: https://scholar.sun123zxy.top/"
+  },
+  {
+    "objectID": "cv.html#information",
+    "href": "cv.html#information",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Name: Xingyu Zhong (钟星宇)\nEmail: sun123zxy@qq.com\nHomepage: https://scholar.sun123zxy.top/"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\n2022/09–2026/06 | Beijing Institute of Technology | Bachelor of Mathematics\n\nGrades (by the end of 5th semester)\n\nGPA: 3.9 / 4.0 (93.6)\nGPA Ranking: 1 / 27\nOverall Ranking: 1 / 27\nObtain 90+ scores in almost all the core courses in mathematics\nObtain 80+ scores in all courses\n\n\n\nUndergraduate Thesis (WIP)\n\nAdvisor: Prof. Xun Xie (谢迅)\nStudying Area: algebraic groups, Lie algebras, Young tableaux\n\n\n\nAwards\n\n\n\n\n\n\n\n\n\nDate\nCycle\nAward\nIssued by\n\n\n\n\n2023/12\n2022–2023\nModel Student\n优秀学生标兵\nBejing Institute of Technology\n\n\n2024/12\n2023–2024\nOutstanding Student\n三好学生\nBejing Institute of Technology\n\n\n\n\n\nScholarships\n\n\n\n\n\n\n\n\n\nDate\nCycle\nScholarship\nIssued by\n\n\n\n\n2023/12\n2022–2023\nNational Scholarship\n国家奖学金\nMinistry of Education, PRC\n\n\n2025/03\n2024–2025\nSamsung Scholarship\nSamsung Electronics China\n\n\n2022–2025\n1st–5th semester\n(for 5 times)\nFirst Class Scholarship\nBejing Institute of Technology"
+  },
+  {
+    "objectID": "cv.html#competitions",
+    "href": "cv.html#competitions",
+    "title": "Curriculum Vitae",
+    "section": "Competitions",
+    "text": "Competitions\nTODO"
+  },
+  {
+    "objectID": "cv.html#talks",
+    "href": "cv.html#talks",
+    "title": "Curriculum Vitae",
+    "section": "Talks",
+    "text": "Talks\n\n\n\n\n\n\n\n\nDate\nTitle\nLinks\n\n\n\n\n2025/09 (TBD)\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\n\n\n\n\n\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\nJoint work with Shubin Xue. The onsite talk will be given by him.\n\n\n\n2025/06/20\nIrreducible Representations of the Symmetric Group\nonsite (en) / latest (zh)\n\n\n\nSelection presentation for BIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\n\n\n2025/04/16\nClassification of Quadratic Forms over \\(\\mathbb Q\\)\nonsite (en) / latest (en)\n\n\n\n2025 spring Algebraic Geometry final presentation\nLecturer: Prof. Yangyu Fan (范洋宇)\n\n\n\n2024/04/20\nDFT from the Perspective of Algebra Isomorphism\n代数同构视角下的离散 Fourier 变换\nonsite (zh) / latest (zh)\nnews (zh)\n\n\n\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\nMentor: Prof. Peng Cao (曹鹏)\n\n\n\n2023/10/18\nThe \\(\\Delta\\) Discriminant of Univariate Polynomials\n一元多项式的 Delta 判别式\nonsite (zh) / latest (zh)\n\n\n\n2023 fall Advanced Algebra II course seminar\nLecturer: Prof. Peng Cao (曹鹏)\n\n\n\n2023/08/01\nA Convolution-Oriented FFT Tutorial\nonsite (zh) / suppliment (zh) / latest (zh)\nnews (zh)\n\n\n\nBITACMCLUB 2023 summer training\n\n\n\n2023/05/18\nSpace Filling Curves and Cardinality\n空间填充曲线与集合势理论\nonsite (zh) latest (zh)\n\n\n\n2023 spring Mathematical Analysis II course seminar\nJoint work with Chong Ning\nLecturer: Prof. Zhentao Lv (吕珍涛)\n\n\n\n2023/04/23\nWallis Product, Stirling’s Approximation and Guassian Distributions\nWallis 公式、Stirling 公式与正态分布\nonsite (zh) / latest (zh)\n\n\n\n2023 spring Mathematical Analysis II course seminar\nLecturer: Prof. Zhentao Lv (吕珍涛)\n\n\n\n2022/12/13\nTopics on the compactness of \\(\\mathbb R\\)\n有限覆盖定理与实数理论\nlatest (zh)\n\n\n\n2022 fall Mathematical Analysis I course seminar\nLecturer: Prof. Pengshuai Shi (史鹏帅)"
+  },
+  {
+    "objectID": "cv.html#projects",
+    "href": "cv.html#projects",
+    "title": "Curriculum Vitae",
+    "section": "Projects",
+    "text": "Projects\n\n\n\n\n\n\n\n\nDate\nProject\nLinks\n\n\n\n\n2022/12 – 2023/12\nOn the Uniqueness of the DFT matrix\n将循环卷积转化为乘积的矩阵是否只有傅里叶矩阵？\n\n\n\n\nInnovation and Entrepreneurship Training Program for College Students (Level: City & University)\n大学生创新创业训练计划（市、校级）\nIt is shown that the DFT matrix, in some degree, is the only linear transformation that carries circulant convolution into pointwise multiplication.\nRole: Project Leader\nAdvisor: Prof. Feng Zhang (张峰), School of Information and Electronics, BIT"
+  },
+  {
+    "objectID": "cv.html#attendances",
+    "href": "cv.html#attendances",
+    "title": "Curriculum Vitae",
+    "section": "Attendances",
+    "text": "Attendances\n\n\n\n\n\n\n\n\nDate\nEvent\nLinks\n\n\n\n\n2025/09/08–2025/09/12\nBIT–UTokyo undergraduate exchange for outstanding students major in mathematics\n\n\n\n\nRole: (upcoming) Attendance\n\n\n\n2025/07/01–2025/07/20\nBICMR–RUC algebra and formalization summer school\n代数与形式化数学暑期学校\nlink (zh)\n\n\n\nRole: (upcoming) Attendance\n\n\n\n2025/02/02–2025/02/15\n2025 FRP Winter Programme in Mordern Advanced Deep Learning\n\n\n\n\nA two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program.\nRole: Attendance / Special Award Winner (3 out of 15)\n\n\n\n2024/09/30\nComBIT24–StanleyFest\nlink (zh/en)\n\n\n\nA conference on combinatorics at BIT in 2024\nRole: Attendance\n\n\n\n2024/04/20 – 2024/04/21\nBIT–USTC undergraduate exchange for outstanding students major in mathematics\nnews (zh)\n\n\n\nRole: Speaker / Attendance"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Curriculum Vitae",
+    "section": "Skills",
+    "text": "Skills\nTODO"
   }
 ]
