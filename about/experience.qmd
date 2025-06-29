@@ -11,7 +11,7 @@
   - 
 * - []{colspan=3}
     - BIT--UTokyo undergraduate exchange for outstanding students major in mathematics
-    - Joint work with Shubin Xue. The onsite talk will be given by him.
+    - Joint work with Shubin Xue (薛术彬). The onsite talk will be given by him.
 
 * - 2025/06/20
   - **Irreducible Representations of the Symmetric Group**
@@ -61,7 +61,7 @@
     [latest (zh)](https://blog.sun123zxy.top/posts/20230519-hilbert/)
 * - []{colspan=3}
     - 2023 spring *Mathematical Analysis II* course seminar
-    - Joint work with Chong Ning
+    - Joint work with Chong Ning (宁冲)
     - **Lecturer:** Prof. Zhentao Lv (吕珍涛)
 
 * - 2023/04/23
@@ -151,6 +151,18 @@
 * - Date
   - Event
   - Links
+
+* - 2024 -- 2025
+  - **Multiple student-organized seminar on mathematics**
+  - 
+* - []{colspan=3}
+    - **Role:** Organizer / Speaker. Among the organizers of the after-class seminar of the courses *Real Variable Functions*, *Complex Variable Functions* and *Abstarct Algebra*. Among the speakers of the student-organized seminar on *Commutative Algebra*.
+
+* - 2023 -- 2024
+  - **Multiple competitive programming contests**
+  - 
+* - []{colspan=3}
+    - **Role:** Problem Setter. Participated in the problem setting work of [2023 BITCPC](https://codeforces.com/gym/104825) and 2024 ICPC Asia Kunming Regional.
 
 * - 2023/07 -- 2023/08
   - **[2023 BITACMCLUB competitive programming summer training]{#evt-202307-summer-training}**
