@@ -9,8 +9,14 @@ format:
 
 {{< include about/education.qmd >}}
 
+{{< pagebreak >}}
+
 {{< include about/competitions.qmd >}}
 
+{{< pagebreak >}}
+
 {{< include about/experience.qmd >}}
+
+{{< pagebreak >}}
 
 {{< include about/skills.qmd >}}
