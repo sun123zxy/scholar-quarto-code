@@ -13,6 +13,4 @@ format:
 
 {{< include about/experience.qmd >}}
 
-{{< include about/volunteering.qmd >}}
-
 {{< include about/skills.qmd >}}

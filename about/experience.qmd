@@ -1,6 +1,6 @@
 ## Talks
 
-:::{.list-table widths="1,6,2"}
+:::{.list-table widths="1,7,3"}
 
 * - Date
   - Title
@@ -29,13 +29,12 @@
     - **Lecturer:** Prof. Yangyu Fan (范洋宇)
 
 * - 2024/04/20
-  - **DFT from the Perspective of Algebra Isomorphism**  
+  - **[DFT from the Perspective of Algebra Isomorphism]{#evt-20240420-dft}**  
     代数同构视角下的离散 Fourier 变换
   - [onsite (zh)](/posts/20240420-utsc-dft/dft.pdf) /
-    [latest (zh)](https://blog.sun123zxy.top/posts/20240513-isodft/)  
-    [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm)
+    [latest (zh)](https://blog.sun123zxy.top/posts/20240513-isodft/)
 * - []{colspan=3}
-    - BIT--USTC undergraduate exchange for outstanding students major in mathematics
+    - [BIT--USTC undergraduate exchange for outstanding students major in mathematics](#evt-20240420-utsc-exchange)
     - **Mentor:** Prof. Peng Cao (曹鹏)
 
 * - 2023/10/18
@@ -48,18 +47,17 @@
     - **Lecturer:** Prof. Peng Cao (曹鹏)
 
 * - 2023/08/01
-  - **A Convolution-Oriented FFT Tutorial**
+  - **[A Convolution-Oriented FFT Tutorial]{#evt-20230801-fft}**
   - [onsite (zh)](/posts/20240801-bitacm-fft/fft.pdf) /
-    [suppliment (zh)](/posts/20240801-bitacm-fft/supplement-on-bit-reverse.pdf) /
-    [latest (zh)](https://blog.sun123zxy.top/posts/20230928-dft/)  
-    [news (zh)](https://cs.bit.edu.cn/xyxw/619906a5c812458b9d22a663b74e0dce.htm)
+    [latest (zh)](https://blog.sun123zxy.top/posts/20230928-dft/) /  
+    [suppliment (zh)](/posts/20240801-bitacm-fft/supplement-on-bit-reverse.pdf)
 * - []{colspan=3}
-    - BITACMCLUB 2023 summer training
+    - [2023 BITACMCLUB Competitive Programming Summer Training](#evt-202307-summer-training)
 
 * - 2023/05/18
   - **Space Filling Curves and Cardinality**  
     空间填充曲线与集合势理论
-  - [onsite (zh)](/posts/20230518-ma2-space-filling-curve/space-filling-curve.pdf)
+  - [onsite (zh)](/posts/20230518-ma2-space-filling-curve/space-filling-curve.pdf) /
     [latest (zh)](https://blog.sun123zxy.top/posts/20230519-hilbert/)
 * - []{colspan=3}
     - 2023 spring *Mathematical Analysis II* course seminar
@@ -126,7 +124,7 @@
     - **Role:** (upcoming) Attendance
 
 * - 2025/02/02--2025/02/15
-  - **2025 FRP Winter Programme in Mordern Advanced Deep Learning**
+  - **2025 FRP winter programme in mordern advanced deep learning**
   - 
 * - []{colspan=3}
     - A two-week winter program held in University of Cambridge on modern deep learning theories. Group presentations on hands-on projects were required at the end of the program.
@@ -140,8 +138,24 @@
     - **Role:** Attendance
 
 * - 2024/04/20 -- 2024/04/21
-  - **BIT--USTC undergraduate exchange for outstanding students major in mathematics**
+  - **[BIT--USTC undergraduate exchange for outstanding students major in mathematics]{#evt-20240420-utsc-exchange}**
   - [news (zh)](https://math.bit.edu.cn/rcpy1/951c9035cf9849ce988e361861937b98.htm)
 * - []{colspan=3}
-    - **Role:** Speaker / Attendance
+    - **Role:** [Speaker](#evt-20240420-dft) / Attendance
+:::
+
+## Volunteering
+
+:::{.list-table widths=1,5,1}
+
+* - Date
+  - Event
+  - Links
+
+* - 2023/07 -- 2023/08
+  - **[2023 BITACMCLUB competitive programming summer training]{#evt-202307-summer-training}**
+  - [news (zh)](https://cs.bit.edu.cn/xyxw/619906a5c812458b9d22a663b74e0dce.htm)
+* - []{colspan=3}
+    - A 5-week training program for BIT & Yan'an Univ. students interested in competitive programming. 
+    - **Role:** [Lecturer](#evt-20230801-fft). Talked about DFT / FFT, its convolutional nature and mathematical background.
 :::
