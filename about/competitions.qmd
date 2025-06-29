@@ -1,3 +1,100 @@
 ## Competitions
 
-TODO
+### Competitive Programming
+
+#### ICPC
+
+International Collegiate Programming Contest
+
+:::{.list-table width="1,2,1"}
+
+* - Date
+  - Competition
+  - Prize
+
+* - 2024/11/03
+  - 2024 Asia Nanjing Regional
+  - Bronze Medal
+
+* - 2023/11/25
+  - 2023 Asia Hefei Regional
+  - Silver Medal
+
+* - 2023/10/22
+  - 2023 Asia Xi'an Regional
+  - Bronze Medal
+:::
+
+#### CCPC
+
+China Collegiate Programming Contest
+
+:::{.list-table width="1,2,1"}
+
+* - Date
+  - Competition
+  - Prize
+
+* - 2024/11/17
+  - 2024 Zhengzhou National
+  - Silver Medal
+
+* - 2024/05/26
+  - 2024 Guangdong National Invitational
+  - Gold Medal
+
+* - 2023/11/05
+  - 2023 Harbin National
+  - Silver Medal
+
+* - 2023/05/28
+  - 2023 Hunan National Invitational
+  - Silver Medal
+:::
+
+- Countless other university / Provincial / national level contests (BITPC, Baidu Astar, Lanqiao, etc.) in 2022--2024
+
+### Mathematics
+
+:::{.list-table width="1,2,1"}
+
+* - Date
+  - Competition
+  - Prize
+
+* - 2024/04/15
+  - 2024 Alibaba Global Mathematics Competition
+  - Finalist
+
+* - 2022/10
+  - BIT Campus Mathematics Competition for Junier Grade Group
+  - First Prize
+:::
+
+#### CMC
+
+The Chinese Mathematics Competitions
+
+:::{.list-table width="1,2,1"}
+
+* - Date
+  - Competition
+  - Prize
+
+* - 2024/11/09
+  - 2024 National Preliminary Beijing (Mathematics Major, Type A)
+  - Third Prize
+
+* - 
+  - 2024 Beijing Provincial (Mathematics Major, Type A)
+  - Third Prize
+
+* - 2023/11/11
+  - 2023 National Preliminary Beijing (Mathematics Major, Type A)
+  - Third Prize
+
+* - 
+  - 2023 Beijing Provincial (Mathematics Major, Type A)
+  - Second Prize
+
+:::

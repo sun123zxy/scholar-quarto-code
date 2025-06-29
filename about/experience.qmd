@@ -97,7 +97,7 @@
     将循环卷积转化为乘积的矩阵是否只有傅里叶矩阵？
   - 
 * - []{colspan=3}
-    - Innovation and Entrepreneurship Training Program for College Students (Level: City & University)  
+    - Innovation and Entrepreneurship Training Program for College Students (Level: Provincial & Collegiate)  
       大学生创新创业训练计划（市、校级）
     - It is shown that the DFT matrix, in some degree, is the only linear transformation that carries circulant convolution into pointwise multiplication.
     - **Role:** Project Leader
